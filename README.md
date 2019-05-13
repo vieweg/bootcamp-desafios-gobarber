@@ -15,7 +15,7 @@ Ambiente de desenvolvimento para node.js instalado e conexão com o banco de dad
 
 Clone o repositório
 
-`git clone git://github.com/vieweg/bootcamp-desafios-gobarber.git
+`git clone git://github.com/vieweg/bootcamp-desafios-gobarber.git`
 
 Acesse o diretório
 
