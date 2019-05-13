@@ -1,0 +1,23 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+<div class="content">
+  <strong>Olá, {{ user.name }}</strong>
+  <p>Confira sua agenda de atendimento</p>
+  <ul class="providers">
+    {% for schedule in schedules %}
+      <li class="provider">
+        <div style="flex:1">
+          <img src="/files/{{ schedule.user.avatar }}" alt="">
+          <div style="display:flex;flex:1;flex-direction:column;align-itens:center">
+            <strong>{{ schedule.user.name }}</strong>
+            <h3 style="color: #7159c1;margin-top:5px">{{ schedule.appointment.date | date('DD/MM/YY HH:mm')}}</h3>
+          </div>
+        </div>
+        <a href="/app/appointments/drop/{{schedule.appointment.id}}">x</a>
+      </li>
+    {% endfor %}
+  </ul>
+    <a href="/app/logout" class='logout'>Logout</a>
+</div>
+{% endblock %}

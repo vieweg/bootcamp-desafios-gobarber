@@ -1,0 +1,35 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+<div class="content">
+  <strong>Olá, {{ user.name }}</strong>
+  <p>Confira seus agendamentos</p>
+  <ul class="providers">
+    {% for schedule in schedules %}
+      <li class="provider">
+        <div style="flex:1">
+          <img src="/files/{{ schedule.provider.avatar }}" alt="">
+          <div style="display:flex;flex:1;flex-direction:column;align-itens:center">
+            <strong>{{ schedule.provider.name }}</strong>
+            <h3 style="color: #7159c1;margin-top:5px">{{ schedule.appointment.date | date('DD/MM/YY HH:mm')}}</h3>
+          </div>
+        </div>
+        <a href="/app/appointments/drop/{{schedule.appointment.id}}">x</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p>Inicie um novo agendamento escolhendo um profissional abaixo</p>
+  <ul class="providers">
+    {% for provider in providers %}
+      <li class="provider">
+        <div>
+          <img src="/files/{{provider.avatar}}" alt="">
+          <strong>{{provider.name}}</strong>
+        </div>
+        <a href="/app/appointments/new/{{provider.id}}">+</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <a href="/app/logout" class='logout'>Logout</a>
+</div>
+{% endblock %}
