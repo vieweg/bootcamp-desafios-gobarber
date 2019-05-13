@@ -27,7 +27,7 @@ Instale as dependências
 
 Rode as migrations
 
-`npx sequelize db:migration`
+`npx sequelize db:migrate`
 
 Execute o servidor
 
