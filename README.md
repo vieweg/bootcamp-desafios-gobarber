@@ -3,7 +3,7 @@ Aplicação desenvolvida em NODE.JS
 Uma agenda com profissionais e usuarios, onde você pode se cadastrar como prestador de serviços ou usuário comum.
 Apos efetuar o cadastro, você faz o login com email e senha e pode agendar procedimentos com os usuarios cadastrados como profissionais.
 
-Aplicação simples, somente para aprendizado, contemplando: conexão com DB, rotas, session, midlewares, upload de arquivos, templates nunjunck e outras especificações.
+Aplicação simples, somente para aprendizado, contemplando: conexão com DB, rotas, session, middlewares, upload de arquivos, templates nunjunck e outras características.
 
 ### Requisitos
 
@@ -11,7 +11,7 @@ Ambiente de desenvolvimento para node.js instalado e conexão com o banco de dad
 
 `src/config/databse.js`
 
-### instalação
+### Instalação
 
 Clone o repositório
 
@@ -19,7 +19,7 @@ Clone o repositório
 
 Acesse o diretório
 
-`cd gobarber`
+`cd bootcamp-desafios-gobarber`
 
 Instale as dependências
 
